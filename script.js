@@ -182,6 +182,29 @@ document.getElementById("user").style.padding = "5px";
 document.getElementById("user").style.textAlign = "center";
 document.getElementById("user").style.fontSize = "30px";
 
+//creating refresh button
+
+var refresh = document.createElement("a");
+refresh.id = "reload";
+refresh.href = "https://word-relay-by-subhajitmaji.netlify.app";
+box.appendChild(refresh);
+document.getElementById("reload").innerHTML += "<button id='buton'>RELOAD</button>";
+
+//styling refresh button
+
+document.getElementById("reload").style.display = "none";
+document.getElementById("buton").style.height = "50px";
+document.getElementById("buton").style.width = "100%";
+document.getElementById("buton").style.borderRadius = "15px";
+document.getElementById("buton").style.border = "none";
+document.getElementById("buton").style.background = "#FF7373";
+document.getElementById("buton").style.boxShadow = "0px 5px 0px 0px #CE4646";
+document.getElementById("buton").style.fontFamily = "serif";
+document.getElementById("buton").style.fontSize = "15px";
+document.getElementById("buton").style.letterSpacing = "2px";
+document.getElementById("buton").style.color = "white";
+document.getElementById("reload").style.textDecoration = "none";
+
 //creating credits
 
 let credits = document.createElement("div");
