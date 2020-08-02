@@ -15,7 +15,7 @@ document.body.appendChild(box);
 //styling main container
 
 document.getElementById("container").style.background = "#4C98EA";
-document.getElementById("container").style.height = "300px";
+document.getElementById("container").style.height = "400px";
 document.getElementById("container").style.width = "100%";
 document.getElementById("container").style.margin = "0px";
 document.getElementById("container").style.display = "flex";
