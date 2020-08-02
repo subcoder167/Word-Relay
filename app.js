@@ -14,7 +14,6 @@ function target() {
     }
     words.shift();
     var word = item[Math.floor(Math.random()*item.length)];
-    console.log(word);
     phrase.innerHTML = word;
 }
 
@@ -26,10 +25,8 @@ function countdown() {
         sec.innerHTML = seconds;
         if (seconds === 0) {
             document.getElementById("phrase").innerHTML = "" + "GAME OVER";
-            document.getElementById("start").style.display = "block";
-            document.getElementById("start").style.fontSize = "8px";
-            document.getElementById("start").innerHTML = "" + "REFRESH";
-            document.getElementById("start").disabled = "true";
+            document.getElementById("start").style.display = "none";
+            document.getElementById("reload").style.display = "block";
             document.getElementById("user").style.display = "none";
             clearInterval(timer);
             seconds = 60;
@@ -37,16 +34,15 @@ function countdown() {
     },1000);
 }
 
+
 //function for addition of score
 
 function score() {
     points = 0;
     document.getElementById("user").addEventListener('input', function(event){
-        console.log(document.getElementById("user").value==document.getElementById("phrase").innerHTML)
         document.getElementById("user").value = document.getElementById("user").value.toUpperCase();
         if( document.getElementById("user").value == document.getElementById("phrase").innerHTML) {
-            console.log("match");
-            points++;
+            points += 10;
             scr.innerHTML = points;
             document.getElementById("user").value = "";
             target();
